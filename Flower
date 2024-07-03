@@ -1,0 +1,23 @@
+def calculate_largest_flower(flower_data):
+    # Initialize a variable to store the maximum petal size
+    max_petal_size = 0
+    
+    # Iterate through the list of flower data
+    for flower in flower_data:
+        # Check if the current flower's petal size is greater than the current maximum
+        if flower['petal_size'] > max_petal_size:
+            max_petal_size = flower['petal_size']
+    
+    # Return the maximum petal size
+    return max_petal_size
+
+# Sample flower data
+flower_data = [
+    {'name': 'Rose', 'petal_size': 5},
+    {'name': 'Lily', 'petal_size': 6},
+    {'name': 'Sunflower', 'petal_size': 8}
+]
+
+# Calculate the largest flower
+largest_flower_size = calculate_largest_flower(flower_data)
+print(f"The largest flower has a petal size of {largest_flower_size}")
